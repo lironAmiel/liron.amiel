@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="post" action="">
+	Phone:<input type="text"  id="number" onkeyup="validation()">
+	</form>
+</body>
+<script type="text/javascript">
+	function validation(){
+	var number=document.getElementById("number").value;///get id with value 
+	var numberpattern=/^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;////Regular expression
+	if(numberpattern.test(number))
+	   {
+		document.getElementById("number").style.backgroundColor='yellow';
+       }
+    else
+      {
+    	document.getElementById("number").style.backgroundColor='red'; 
+      }
+	}
+
+</script>
+</html>
